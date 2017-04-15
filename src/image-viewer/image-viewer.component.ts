@@ -22,7 +22,7 @@ export class ImageViewerComponent implements OnInit {
     private zoom: number = 0.1; // 缩放比率
     private initTop: number; // 图片初始css的top值
     private initLeft: number; // 图片初始css的left值
-    private moreImgInitLeft: number = 0; // 图片列表容器初始css的left值
+    moreImgInitLeft: number = 0; // 图片列表容器初始css的left值
     private currentImageTempTop: number = 0;
     private currentImageTempLeft: number = 0;
     private dragStartClientX: number = 0;
