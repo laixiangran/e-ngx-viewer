@@ -1,0 +1,54 @@
+{
+	"name": "essence-ng2-viewer",
+	"version": "1.0.0",
+	"description": "This is a video/image/pdf viewer component for Angular.",
+	"main": "dist/index.js",
+	"typings": "dist/index.d.ts",
+	"keywords": [
+		"angular2",
+		"essence-ng2-viewer",
+		"laixiangran"
+	],
+	"homepage": "https://github.com/laixiangran/essence-ng2-viewer",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/laixiangran/essence-ng2-viewer.git"
+	},
+	"author": {
+		"name": "赖祥燃",
+		"email": "laixiangran@163.com",
+		"bolg": "http://www.cnblogs.com/laixiangran",
+		"homepage": "http://www.laixiangran.cn"
+	},
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/yuyang041060120/essence-ng2-viewer/issues"
+	},
+	"scripts": {
+		"prepublish": "tsc",
+		"start": "npm run jit",
+		"jit": "ng serve -o",
+		"aot": "ng serve -o --aot",
+		"build": "npm run build-test",
+		"build-test": "ng build --prod --env=test --aot",
+		"build-prod": "ng build --prod --env=prod --aot"
+	},
+	"dependencies": {},
+	"devDependencies": {
+		"@angular/common": "^4.0.0",
+		"@angular/compiler": "^4.0.0",
+		"@angular/core": "^4.0.0",
+		"@angular/forms": "^4.0.0",
+		"@angular/http": "^4.0.0",
+		"@angular/platform-browser": "^4.0.0",
+		"@angular/platform-browser-dynamic": "^4.0.0",
+		"@angular/router": "^4.0.0",
+		"@angular/cli": "1.0.0",
+		"@angular/compiler-cli": "^4.0.0",
+		"core-js": "^2.4.1",
+		"rxjs": "^5.1.0",
+		"zone.js": "^0.8.4",
+		"@types/node": "~6.0.60",
+		"typescript": "~2.2.0"
+	}
+}

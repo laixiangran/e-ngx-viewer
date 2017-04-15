@@ -1,0 +1,25 @@
+{
+	"compilerOptions": {
+		"target": "es5",
+		"module": "commonjs",
+		"moduleResolution": "node",
+		"sourceMap": true,
+		"emitDecoratorMetadata": true,
+		"experimentalDecorators": true,
+		"noEmitHelpers": false,
+		"declaration": true,
+		"rootDir": "src",
+		"outDir": "dist",
+		"lib": [
+			"es6",
+			"dom"
+		],
+		"types": [
+			"node"
+		]
+	},
+	"exclude": [
+		"node_modules",
+		"example"
+	]
+}

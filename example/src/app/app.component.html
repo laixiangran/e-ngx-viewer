@@ -1,0 +1,9 @@
+<div class="app-main">
+	<h1>Viewer Component for Angular2</h1>
+	<h2>video viewer</h2>
+	<essence-ng2-viewer (ready)="videoViewerReady($event)" [model]="'video'" [poster]="poster" [source]="videoUrl" [width]="1000" [height]="700"></essence-ng2-viewer>
+	<h2>image viewer</h2>
+	<essence-ng2-viewer (ready)="imageViewerReady($event)" [model]="'image'" [source]="images" [width]="1000" [height]="700"></essence-ng2-viewer>
+	<h2>pdf viewer</h2>
+	<essence-ng2-viewer (ready)="pdfViewerReady($event)" [model]="'pdf'" [source]="pdfUrl" [viewerUrl]="pdfViewerUrl" [width]="1000" [height]="700"></essence-ng2-viewer>
+</div>
