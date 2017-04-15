@@ -5,8 +5,8 @@
 	},
 	"apps": [
 		{
-			"root": "example/src",
-			"outDir": "example/dist",
+			"root": "example",
+			"outDir": "example_dist",
 			"assets": [
 				"assets",
 				"favicon.ico"
@@ -18,7 +18,7 @@
 			"prefix": "app",
 			"styles": [
 				"./index.css",
-				"../../node_modules/font-awesome/css/font-awesome.min.css"
+				"../node_modules/font-awesome/css/font-awesome.min.css"
 			],
 			"scripts": [],
 			"environmentSource": "environments/environment.ts",
