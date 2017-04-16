@@ -2,8 +2,6 @@
 	"name": "essence-ng2-viewer",
 	"version": "1.0.0",
 	"description": "This is a video/image/pdf viewer component for Angular.",
-	"main": "dist/index.js",
-	"typings": "dist/index.d.ts",
 	"keywords": [
 		"angular2",
 		"essence-ng2-viewer",
@@ -44,10 +42,10 @@
 		"@angular/router": "^4.0.0",
 		"@angular/cli": "1.0.0",
 		"@angular/compiler-cli": "^4.0.0",
+		"@types/node": "~6.0.60",
 		"core-js": "^2.4.1",
 		"rxjs": "^5.1.0",
 		"zone.js": "^0.8.4",
-		"@types/node": "~6.0.60",
 		"typescript": "~2.2.0"
 	}
 }
