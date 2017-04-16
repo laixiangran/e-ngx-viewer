@@ -1,6 +1,6 @@
 {
 	"name": "essence-ng2-viewer",
-	"version": "1.0.1",
+	"version": "1.0.0",
 	"description": "essence-ng2-viewer is an Angular component that can view video/image/pdf.",
 	"keywords": [
 		"angular2",
