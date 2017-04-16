@@ -1,3 +1,13 @@
+# 1.0.1 (2017-04-16)
+
+## Bug Fixes
+
+## Code Refactoring
+
+## Features
+
+## BREAKING CHANGES
+
 # 1.0.0 (2017-03-30)
 
 ## Bug Fixes
