@@ -1,8 +1,8 @@
 # essence-ng2-viewer
 
-This is a video/image/pdf viewer component for Angular.
+essence-ng2-viewer is an Angular component that can view video/image/pdf.
 
-## 功能点
+## Introduce
 
 ### video-viewer（视频播放器）
 
@@ -16,7 +16,7 @@ This is a video/image/pdf viewer component for Angular.
 
 支持pdf的放大、缩小、跳转到指定页、文档搜索、自适应页面、打印等功能
 
-## 依赖
+## Dependency
 
 ```json
 {
@@ -27,18 +27,22 @@ This is a video/image/pdf viewer component for Angular.
 }
 ```
 
-## 用法
+## Usage
 
-### 部署pdfjs
+```shell
+npm install --save essence-ng2-viewer
+```
+
+### Deploy pdfjs
 
 要能正常使用pdf-viewer，则需要将构建好的pdfjs(`../../assets/scripts/pdfjs`)包部署到服务器上，与要查看的pdf文件为同一个服务器（目前不支持跨域查看）。
 
 检查是否部署成功（根据实际部署的位置）：访问`http://xxx/pdfjs/web/viewer.html`，能正常加载pdf则说明部署成功。
 
-### module中导入
+### Add the EssenceNg2ViewerModule
 
 ```typescript
-import {EssenceNg2ViewerModule} from "../components/essence-ng2-viewer/essence-ng2-viewer.module";
+import {EssenceNg2ViewerModule} from "essence-ng2-viewer";
 @NgModule({
     imports: [
         EssenceNg2ViewerModule
@@ -46,7 +50,7 @@ import {EssenceNg2ViewerModule} from "../components/essence-ng2-viewer/essence-n
 })
 ```
 
-### template中使用
+### Template
 
 ```html
 <h2>video viewer</h2>
@@ -59,7 +63,7 @@ import {EssenceNg2ViewerModule} from "../components/essence-ng2-viewer/essence-n
 <essence-ng2-viewer (ready)="pdfViewerReady($event)" [model]="'pdf'" [source]="pdfUrl" [viewerUrl]="pdfViewerUrl" [width]="1000" [height]="700"></essence-ng2-viewer>
 ```
 
-### 对应的component
+### Component
 
 ```typescript
 pdfViewerUrl: string = 'http://localhost:4200/assets/scripts/pdfjs/web/viewer.html';
@@ -87,9 +91,9 @@ pdfViewerReady ($event: any) {
 }
 ```
 
-## API说明
+## API
 
-### 输入属性
+### Inputs
 
 - `model`（`?string='pdf'`） - 视图模式，默认`pdf`。支持`pdf`、`image`两种模式，将支持`video`模式
 
@@ -103,6 +107,6 @@ pdfViewerReady ($event: any) {
 
 - `viewerUrl`（`string`） - pdfjs的viewer.html所在路径(pdfjs/web/viewer.html)，`pdf`模式下有效
 
-### 事件
+### Outputs (event)
 
 - `ready` - 查看器初始完成的事件
