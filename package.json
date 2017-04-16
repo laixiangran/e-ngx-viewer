@@ -1,6 +1,6 @@
 {
 	"name": "essence-ng2-viewer",
-	"version": "4.0.0",
+	"version": "4.0.1",
 	"description": "essence-ng2-viewer is an Angular component that can view video/image/pdf.",
 	"keywords": [
 		"angular2",
@@ -20,7 +20,7 @@
 	},
 	"license": "MIT",
 	"bugs": {
-		"url": "https://github.com/yuyang041060120/essence-ng2-viewer/issues"
+		"url": "https://github.com/laixiangran/essence-ng2-viewer/issues"
 	},
 	"scripts": {
 		"start": "npm run jit",
