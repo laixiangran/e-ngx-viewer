@@ -1,6 +1,6 @@
 {
 	"name": "essence-ng2-viewer",
-	"version": "1.0.1",
+	"version": "4.0.0",
 	"description": "essence-ng2-viewer is an Angular component that can view video/image/pdf.",
 	"keywords": [
 		"angular2",
@@ -30,11 +30,13 @@
 		"build-test": "ng build --prod --env=test --aot",
 		"build-prod": "ng build --prod --env=prod --aot"
 	},
-	"dependencies": {},
+	"dependencies": {
+		"font-awesome": "^4.7.0"
+	},
 	"devDependencies": {
+		"@angular/core": "^4.0.0",
 		"@angular/common": "^4.0.0",
 		"@angular/compiler": "^4.0.0",
-		"@angular/core": "^4.0.0",
 		"@angular/forms": "^4.0.0",
 		"@angular/http": "^4.0.0",
 		"@angular/platform-browser": "^4.0.0",
