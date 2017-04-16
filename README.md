@@ -1,4 +1,4 @@
-# essence-ng2-viewer v1.0.0
+# essence-ng2-viewer
 
 This is a video/image/pdf viewer component for Angular.
 

@@ -25,7 +25,6 @@
 		"url": "https://github.com/yuyang041060120/essence-ng2-viewer/issues"
 	},
 	"scripts": {
-		"prepublish": "ngc",
 		"start": "npm run jit",
 		"jit": "ng serve -o",
 		"aot": "ng serve -o --aot",
