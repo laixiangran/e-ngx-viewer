@@ -1,8 +1,4 @@
 {
-	"project": {
-		"version": "1.0.0-beta.32.3",
-		"name": "angular2-flying"
-	},
 	"apps": [
 		{
 			"root": "example",
@@ -15,7 +11,7 @@
 			"main": "main.ts",
 			"polyfills": "polyfills.ts",
 			"tsconfig": "tsconfig.json",
-			"prefix": "app",
+			"prefix": "",
 			"styles": [
 				"./index.css",
 				"../node_modules/font-awesome/css/font-awesome.min.css"
