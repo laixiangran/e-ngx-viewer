@@ -103,3 +103,7 @@ essence-ng2-viewer is an Angular component that can view video/image/pdf.
 ### Outputs (event)
 
 - `ready` - 查看器初始完成的事件
+
+# License
+
+[![MIT License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat)](/LICENSE)
