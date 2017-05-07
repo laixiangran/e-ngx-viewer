@@ -1,15 +1,10 @@
 import {Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
 import {DomSanitizer, SafeResourceUrl} from "@angular/platform-browser";
 
-let template = `
-<div class="pdfViewerContainer">
-	<iframe [width]="width" [height]="height" *ngIf="pdfUrl" [src]="pdfUrl" frameborder="0"></iframe>
-</div>
-`;
-
 @Component({
     selector: 'pdf-viewer',
-    template: template
+	templateUrl: './pdf-viewer.component.html',
+	styleUrls: ['./pdf-viewer.component.scss']
 })
 export class PDFViewerComponent implements OnInit {
 

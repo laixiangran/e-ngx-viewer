@@ -1,0 +1,83 @@
+<div class="videoViewerContainer"
+	 (mouseover)="videoMouseover($event)"
+	 (mouseout)="videoMouseout($event)"
+	 [style.width]="width + 'px'" #videoViewerContainer>
+	<div class="videoViewer">
+		<video (click)="playOrPause()"
+			   [width]="width"
+			   [poster]="poster"
+			   (loadedmetadata)="onLoadedmetadata($event)"
+			   (ended)="OnPlayEnded($event)"
+			   (timeupdate)="onTimeupdate($event)"
+			   (progress)="onProgress($event)"
+			   (canplaythrough)="onCanplaythrough($event)"
+			   (play)="onPlay($event)">
+			<source [src]="videoUrl" type="video/mp4"/>
+		</video>
+		<div *ngIf="videoElem && videoElem.paused">
+			<span class="fa"
+				  (click)="playOrPause()"
+				  [ngClass]="{'fa-repeat': videoElem.ended, 'fa-play-circle-o': !videoElem.ended}"
+				  [title]="videoElem.ended ? '重播' : '播放'">
+			</span>
+		</div>
+	</div>
+	<div class="videoToolbar" *ngIf="videoElem" #videoToolbar>
+		<div class="videoToolbar_progress"
+			 [style.height]="videoToolbarProgressHeight + 'px'">
+			<span
+				(mousedown)="progressBallDragStart($event)"
+				(mousemove)="progressBallDrag($event)"
+				(mouseup)="progressBallDragEnd($event)"
+				(mouseleave)="progressBallDragEnd($event)"
+				[style.left]="play_progress + 'px'"
+				[style.margin-left]="play_progress > 16 ? '-16px' : '0'"
+				[style.opacity]="showProgressBall ? 1 : 0"
+				class="progress_val_ball">
+
+				<span>
+					{{getFormatTime(play_progress / videoToolbar.clientWidth * videoElem.duration)}}
+				</span>
+
+			</span>
+			<div (mousemove)="videoToolbarProgressMove($event)" (click)="videoToolbarProgressClick($event)"
+				 class="videoToolbar_play_progress" [style.width]="play_progress + 'px'">
+			</div>
+			<div (mousemove)="videoToolbarProgressMove($event)" (click)="videoToolbarProgressClick($event)"
+				 class="videoToolbar_buffer_progress">
+			</div>
+			<span class="timeTip" [style.left]="(timeTipOffsetX -16) + 'px'">
+				{{timeTip}}
+			</span>
+		</div>
+		<div class="videoToolbar_play_btn">
+			<span (click)="playOrPause()" *ngIf="videoElem.paused" class="playBtn fa fa-play-circle-o"
+				  aria-hidden="true" [title]="videoElem.ended ? '重播' : '播放'"></span>
+			<span (click)="playOrPause()" *ngIf="!videoElem.paused" class="playBtn fa fa-pause-circle-o"
+				  aria-hidden="true" title="暂停"></span>
+			<span class="playTime">
+				<span>{{currentTime}}</span>&nbsp;/&nbsp;{{totalTime}}
+			</span>
+		</div>
+		<div class="videoToolbar_volume_btn">
+			<span (click)="isMuted()" class="mutedBtn fa" [ngClass]="{'fa-volume-down': videoElem.volume > 0 && videoElem.volume < 0.5, 'fa-volume-up': videoElem.volume >= 0.5, 'fa-volume-off': videoElem.volume == 0}"
+				  aria-hidden="true" title="静音设置"></span>
+			<span class="volume_val"
+				  #volume_val>
+				<span class="volume_val_ball"
+					  (mousedown)="volumeBallDragStart($event)"
+					  (mousemove)="volumeBallDrag($event, volume_val.clientWidth)"
+					  (mouseup)="volumeBallDragEnd($event)"
+					  (mouseleave)="volumeBallDragEnd($event)"
+					  [style.left]="(videoElem.volume * 100 - 8) + 'px'">
+
+					<span>
+						{{(videoElem.volume * 100).toFixed(0) + '%'}}
+					</span>
+				</span>
+				<span (click)="volumeValClick($event, volume_val.clientWidth)" class="volume_val_active" [style.width]="(videoElem.volume * 100) + 'px'"></span>
+				<span (click)="volumeValClick($event, volume_val.clientWidth)" class="volume_val_notActive"></span>
+			</span>
+		</div>
+	</div>
+</div>
