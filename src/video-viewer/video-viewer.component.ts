@@ -169,7 +169,7 @@ export class VideoViewerComponent implements OnInit {
 	 * 播放视频
 	 */
 	play () {
-		this.videoElem.ended && this.videoElem.load();
+		this.videoElem.ended && (this.videoElem.currentTime = 0);
 		this.videoElem.play();
 	}
 
