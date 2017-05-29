@@ -21,18 +21,24 @@ essence-ng2-viewer is an Angular component that can view video/image/pdf.
 1. Install
 
 	```shell
-	npm install --save essence-ng2-viewer
+	npm install --save essence-ng2-viewer@latest
 	```
 
-2. Use [font-awesome](http://fontawesome.io/icons/)
+2. Set in the .angular-cli.json（@angular/cli）
 
-3. Deploy pdfjs (only for pdf-viewer)
+    ```json
+    "styles": [
+        "../node_modules/font-awesome/css/font-awesome.min.css"
+    ]
+    ```
+
+4. Deploy pdfjs (only for pdf-viewer)
 
 	要能正常使用pdf-viewer，则需要将构建好的[pdfjs](https://github.com/mozilla/pdf.js)部署到服务器上，与要查看的pdf文件为同一个服务器（目前不支持跨域查看）。
 	
 	检查是否部署成功（根据实际部署的位置）：访问`http://xxx/pdfjs/web/viewer.html`，能正常访问并加载默认的pdf则说明部署成功。
 
-4. Add the EssenceNg2ViewerModule
+5. Add the EssenceNg2ViewerModule
 
 	```typescript
 	import {EssenceNg2ViewerModule} from "essence-ng2-viewer";
@@ -43,7 +49,7 @@ essence-ng2-viewer is an Angular component that can view video/image/pdf.
 	})
 	```
 
-5. Template
+6. Template
 
 	```html
 	<h2>video viewer</h2>
@@ -56,7 +62,7 @@ essence-ng2-viewer is an Angular component that can view video/image/pdf.
 	<essence-ng2-viewer (ready)="pdfViewerReady($event)" [model]="'pdf'" [source]="pdfUrl" [viewerUrl]="pdfViewerUrl" [width]="1000" [height]="700"></essence-ng2-viewer>
 	```
 
-6. Component
+7. Component
 
 	```typescript
 	pdfViewerUrl: string = 'http://localhost:4200/assets/scripts/pdfjs/web/viewer.html';
