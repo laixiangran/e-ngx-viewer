@@ -23,11 +23,8 @@
 		"url": "https://github.com/laixiangran/essence-ng2-viewer/issues"
 	},
 	"scripts": {
-		"prepublish": "gulp prepublish && ngc",
-		"start": "npm run jit",
-		"jit": "ng serve -o",
-		"aot": "ng serve -o --aot",
-		"build": "npm run build-test",
+		"release": "gulp prepublish && ngc && npm publish",
+		"start": "ng serve -o",
 		"build-test": "ng build --prod --env=test --aot",
 		"build-prod": "ng build --prod --env=prod --aot"
 	},
