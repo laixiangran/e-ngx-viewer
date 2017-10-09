@@ -9,6 +9,7 @@ export class EssenceNg2ViewerComponent implements OnInit {
 
 	@Input() model: string = 'pdf'; // 视图模式，默认pdf。将实现image与video模式
     @Input() width: number = 600; // 查看器宽度
+	@Input() videoWidth: number = 400; //视频播放器宽度
     @Input() height: number = 800; // 查看器高度
     @Input() source: string | string[]; // pdf路径、图片文件路径数组及视频路径
 	@Input() poster: string; // 视频预览图（海报图片）路径

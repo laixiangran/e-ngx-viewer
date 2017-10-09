@@ -303,7 +303,7 @@ export class ImageViewerComponent implements OnInit {
      */
     currentImageZoomByWheel(e: any) {
         e.preventDefault(); // 禁用滚轮事件的默认操作
-        let scale: number = (e.wheelDelta ? e.wheelDelta / (-120) : (e.detail || 0) / 3) * Math.abs(this.zoom);
+        let scale: number = (e.wheelDelta ? e.wheelDelta / (-180) : (e.detail || 0) / 3) * Math.abs(this.zoom);
         this.scale(scale);
         if (this.x >= 0.1 && this.y >= 0.1) { // 修复chrome下图片缩小到一定程度会突然变大的bug
             this.changeCurrentImg();

@@ -1,10 +1,16 @@
+<p class="video-list">
+	<span *ngFor="let video of source;let i=index" class='label'
+		  [ngClass]="{'label-default': i != sub,'label-primary': i == sub}"
+		  (click)="selectVideo(video,i)">视频{{i+1}}
+	</span>
+</p>
 <div class="videoViewerContainer"
 	 (mouseover)="videoMouseover($event)"
 	 (mouseout)="videoMouseout($event)"
 	 [style.width]="width + 'px'" #videoViewerContainer>
 	<div class="videoViewer">
 		<video (click)="playOrPause()"
-			   [width]="width"
+			   [width]="videoWidth"
 			   [poster]="poster"
 			   (loadedmetadata)="onLoadedmetadata($event)"
 			   (ended)="OnPlayEnded($event)"
@@ -60,7 +66,8 @@
 			</span>
 		</div>
 		<div class="videoToolbar_volume_btn">
-			<span (click)="isMuted()" class="mutedBtn fa" [ngClass]="{'fa-volume-down': videoElem.volume > 0 && videoElem.volume < 0.5, 'fa-volume-up': videoElem.volume >= 0.5, 'fa-volume-off': videoElem.volume == 0}"
+			<span (click)="isMuted()" class="mutedBtn fa"
+				  [ngClass]="{'fa-volume-down': videoElem.volume > 0 && videoElem.volume < 0.5, 'fa-volume-up': videoElem.volume >= 0.5, 'fa-volume-off': videoElem.volume == 0}"
 				  aria-hidden="true" title="静音设置"></span>
 			<span class="volume_val"
 				  #volume_val>
@@ -75,7 +82,8 @@
 						{{(videoElem.volume * 100).toFixed(0) + '%'}}
 					</span>
 				</span>
-				<span (click)="volumeValClick($event, volume_val.clientWidth)" class="volume_val_active" [style.width]="(videoElem.volume * 100) + 'px'"></span>
+				<span (click)="volumeValClick($event, volume_val.clientWidth)" class="volume_val_active"
+					  [style.width]="(videoElem.volume * 100) + 'px'"></span>
 				<span (click)="volumeValClick($event, volume_val.clientWidth)" class="volume_val_notActive"></span>
 			</span>
 		</div>

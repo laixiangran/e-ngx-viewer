@@ -1,16 +1,25 @@
+p{
+	span {
+		cursor: pointer;
+		margin-right: 6px;
+	}
+}
 .videoViewerContainer {
 	position: relative;
 	margin: 0;
 	padding: 0;
 	height: 100%;
-	min-width: 400px;
-	min-height: 400px;
+	min-width: 200px;
+	min-height: 200px;
 	background-color: #3E3E3E;
-
 	.videoViewer {
 		position: relative;
 		margin-bottom: 53px;
-
+		video {
+			display: block;
+			margin-left: 50%;
+			transform: translateX(-50%);
+		}
 		div {
 			position: absolute;
 			top: 0;

@@ -53,7 +53,7 @@ essence-ng2-viewer is an Angular component that can view video/image/pdf.
 
 	```html
 	<h2>video viewer</h2>
-	<essence-ng2-viewer (ready)="videoViewerReady($event)" [model]="'video'" [poster]="poster" [source]="videoUrl" [width]="1000" [height]="700"></essence-ng2-viewer>
+	<essence-ng2-viewer (ready)="videoViewerReady($event)" [model]="'video'" [poster]="poster" [source]="videoUrl" [width]="1000" [height]="700" [videoWidth]="500"></essence-ng2-viewer>
 	
 	<h2>image viewer</h2>
 	<essence-ng2-viewer (ready)="imageViewerReady($event)" [model]="'image'" [source]="images" [width]="1000" [height]="700"></essence-ng2-viewer>
@@ -97,10 +97,11 @@ essence-ng2-viewer is an Angular component that can view video/image/pdf.
 - `model`（`?string='pdf'`） - 视图模式，默认`pdf`。支持`pdf`、`image`两种模式，将支持`video`模式
 
 - `width`（`?number=600`） - 查看器宽度
+- `video(?number=400)` - video标签的宽度
 
 - `height`（`?number=800`） - 查看器高度
 
-- `source`（`string | string[]`） - 查看的pdf路径、图片文件路径数组及视频路径，`pdf`与`video`模式下数据类型为`string`，`image`模式下数据类型为`string[]`
+- `source`（`string | string[]`） - 查看的pdf路径、图片文件路径数组及视频路径，`pdf`与`video`模式下数据类型为`string[]`，`image`模式下数据类型为`string[]`
 
 - `poster` (`string`) - 视频预览图（海报图片）路径，`video`模式下有效
 
