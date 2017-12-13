@@ -1,6 +1,6 @@
-# essence-ng2-viewer
+# e-ngx-viewer
 
-essence-ng2-viewer is an Angular component that can view video/image/pdf.
+基于Angular的视频/图像/PDF查看器组件。
 
 ## Introduce
 
@@ -21,7 +21,7 @@ essence-ng2-viewer is an Angular component that can view video/image/pdf.
 1. Install
 
 	```shell
-	npm install --save essence-ng2-viewer@latest
+	npm install --save e-ngx-viewer@latest
 	```
 
 2. Set in the .angular-cli.json（@angular/cli）
@@ -38,13 +38,13 @@ essence-ng2-viewer is an Angular component that can view video/image/pdf.
 	
 	检查是否部署成功（根据实际部署的位置）：访问`http://xxx/pdfjs/web/viewer.html`，能正常访问并加载默认的pdf则说明部署成功。
 
-5. Add the EssenceNg2ViewerModule
+5. Add the ENgxViewerModule
 
 	```typescript
-	import {EssenceNg2ViewerModule} from "essence-ng2-viewer";
+	import {ENgxViewerModule} from "e-ngx-viewer";
 	@NgModule({
 	    imports: [
-	        EssenceNg2ViewerModule
+	        ENgxViewerModule
 	    ]
 	})
 	```
@@ -53,13 +53,13 @@ essence-ng2-viewer is an Angular component that can view video/image/pdf.
 
 	```html
 	<h2>video viewer</h2>
-	<essence-ng2-viewer (ready)="videoViewerReady($event)" [model]="'video'" [poster]="poster" [source]="videoUrl" [width]="1000" [height]="700" [videoWidth]="500"></essence-ng2-viewer>
+	<e-ngx-viewer (ready)="videoViewerReady($event)" [model]="'video'" [poster]="poster" [source]="videoUrl" [width]="1000" [height]="700" [videoWidth]="500"></e-ngx-viewer>
 	
 	<h2>image viewer</h2>
-	<essence-ng2-viewer (ready)="imageViewerReady($event)" [model]="'image'" [source]="images" [width]="1000" [height]="700"></essence-ng2-viewer>
+	<e-ngx-viewer (ready)="imageViewerReady($event)" [model]="'image'" [source]="images" [width]="1000" [height]="700"></e-ngx-viewer>
 	
 	<h2>pdf viewer</h2>
-	<essence-ng2-viewer (ready)="pdfViewerReady($event)" [model]="'pdf'" [source]="pdfUrl" [viewerUrl]="pdfViewerUrl" [width]="1000" [height]="700"></essence-ng2-viewer>
+	<e-ngx-viewer (ready)="pdfViewerReady($event)" [model]="'pdf'" [source]="pdfUrl" [viewerUrl]="pdfViewerUrl" [width]="1000" [height]="700"></e-ngx-viewer>
 	```
 
 7. Component

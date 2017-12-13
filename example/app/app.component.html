@@ -1,9 +1,9 @@
 <div class="app-main">
-	<h1>Viewer Component for Angular2</h1>
+	<h1>Viewer Component for Angular</h1>
 	<h2>video viewer</h2>
-	<essence-ng2-viewer (ready)="videoViewerReady($event)" [model]="'video'" [poster]="poster" [source]="videos" [width]="1000" [height]="700" [videoWidth]="600"></essence-ng2-viewer>
+	<e-ngx-viewer (ready)="videoViewerReady($event)" [model]="'video'" [poster]="poster" [source]="videos" [width]="1000" [height]="700" [videoWidth]="600"></e-ngx-viewer>
 	<h2>image viewer</h2>
-	<essence-ng2-viewer (ready)="imageViewerReady($event)" [model]="'image'" [source]="images" [width]="1000" [height]="700"></essence-ng2-viewer>
+	<e-ngx-viewer (ready)="imageViewerReady($event)" [model]="'image'" [source]="images" [width]="1000" [height]="700"></e-ngx-viewer>
 	<h2>pdf viewer</h2>
-	<essence-ng2-viewer (ready)="pdfViewerReady($event)" [model]="'pdf'" [source]="pdfUrl" [viewerUrl]="pdfViewerUrl" [width]="1000" [height]="700"></essence-ng2-viewer>
+	<e-ngx-viewer (ready)="pdfViewerReady($event)" [model]="'pdf'" [source]="pdfUrl" [viewerUrl]="pdfViewerUrl" [width]="1000" [height]="700"></e-ngx-viewer>
 </div>

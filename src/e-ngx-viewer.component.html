@@ -1,4 +1,4 @@
-<div class="essence-ng2-viewer">
+<div class="e-ngx-viewer">
 	<pdf-viewer *ngIf="model == 'pdf'" [width]="width" [height]="height" [source]="source" [viewerUrl]="viewerUrl" (ready)="viewerReady($event)"></pdf-viewer>
 	<image-viewer *ngIf="model == 'image'" [source]="source" [width]="width" [height]="height" (ready)="viewerReady($event)"></image-viewer>
 	<video-viewer *ngIf="model == 'video'" [poster]="poster" [source]="source" [width]="width" [videoWidth]='videoWidth' [height]="height" (ready)="viewerReady($event)"></video-viewer>

@@ -3,4 +3,4 @@
  * homepage：http://www.laixiangran.cn
  */
 
-export {EssenceNg2ViewerModule} from './essence-ng2-viewer.module';
+export { ENgxViewerModule } from './e-ngx-viewer.module';

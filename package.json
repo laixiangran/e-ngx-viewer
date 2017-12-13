@@ -1,16 +1,16 @@
 {
-  "name": "essence-ng2-viewer",
-  "version": "4.0.7",
-  "description": "essence-ng2-viewer is an Angular component that can view video/image/pdf.",
+  "name": "e-ngx-viewer",
+  "version": "4.2.0",
+  "description": "基于Angular的视频/图像/PDF查看器组件",
   "keywords": [
     "angular2",
-    "essence-ng2-viewer",
+    "e-ngx-viewer",
     "laixiangran"
   ],
-  "homepage": "https://github.com/laixiangran/essence-ng2-viewer#readme",
+  "homepage": "https://github.com/laixiangran/e-ngx-viewer#readme",
   "repository": {
     "type": "git",
-    "url": "https://github.com/laixiangran/essence-ng2-viewer.git"
+    "url": "https://github.com/laixiangran/e-ngx-viewer.git"
   },
   "author": {
     "name": "赖祥燃",
@@ -20,7 +20,7 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/laixiangran/essence-ng2-viewer/issues"
+    "url": "https://github.com/laixiangran/e-ngx-viewer/issues"
   },
   "scripts": {
     "release": "gulp prepublish && ngc && npm publish",

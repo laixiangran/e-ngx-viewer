@@ -1,3 +1,7 @@
+# 4.2.0(2017-12-13)
+
+- 将essence-ng2-viewer更名为e-ngx-viewer
+
 # 4.0.7(2017-09-21)
 
 新增 videoWidth属性 用来控制video标签的宽度
